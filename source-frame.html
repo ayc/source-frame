@@ -14,10 +14,72 @@ Copyright (c) 2016 Alex Choi. All rights reserved.
 @demo demo/index.html
 -->
 
+<dom-module id="source-frame">
+  <template>
+    <style>
+
+        #body pre{
+            clear: left;
+            min-height: 42px;
+            padding: 15px 0;
+            color: #f1f1f1;
+            font-size: 12px;
+            line-height: 19px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background-color: #222;
+            counter-reset: line-numbering;
+            margin-top: 0;
+        }
+        pre{
+            font-family: Monaco,monospace;
+        }
+    </style>
+    
+    <div id="body">
+        <template is="dom-repeat" items="{{line}}">
+            <pre>
+                <p>
+                    <a>{{index}}</a>
+                </p>
+                <span>
+                    {{item.text}}
+                </span>
+            </pre>
+        </template>
+        
+        <template is="error" if="[[errorMessage]]">
+            <source-frame-error>[[errorMessage]]</source-frame-error>
+        </template>
+    </div>
+  </template>
+</dom-module>
 
 <script>
   Polymer({
     is: 'source-frame',
+    properties: {
+      src: {
+        type: String,
+        notify: true,
+        observer: '_resourceAssigned'
+      }
+    },
+    // triggered element is created
+    created: function(){
+        
+    },
+    // when dom element is ready
+    ready: function(){},
+    // when dom element is attached
+    attached: function(){},
+    // when dom element is detached
+    detached: function(){},
+    attributeChanged: function(){},
+
+    _resourceAssigned: function(newValue, oldValue) {
+      // src attribute has been updated
+    },    
 
     behaviors: [
     ]
