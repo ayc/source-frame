@@ -1,0 +1,27 @@
+{
+  "name": "source-frame",
+  "version": "0.0.1",
+  "description": "A polymer web component for viewing source",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayc/source-frame.git"
+  },
+  "keywords": [
+    "Polymer",
+    "source-frame",
+    "webcomponent"
+  ],
+  "author": "Alex Choi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ayc/source-frame/issues"
+  },
+  "homepage": "https://github.com/ayc/source-frame#readme"
+}
