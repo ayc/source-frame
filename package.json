@@ -23,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/ayc/source-frame/issues"
   },
-  "homepage": "https://github.com/ayc/source-frame#readme"
+  "homepage": "https://github.com/ayc/source-frame#readme",
+  "dependencies": {
+    "bower": "^1.7.7",
+    "web-component-tester": "^4.2.2"
+  }
 }
